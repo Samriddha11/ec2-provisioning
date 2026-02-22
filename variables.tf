@@ -20,23 +20,6 @@ variable "subnet_id" {
   default     = "subnet-04eec71423a4d2058"
 }
 
-variable "key_name" {
-  description = "Key pair name"
-  type        = string
-  default     = null
-}
-
-# Mandatory Tags
-
-variable "name" {
-  description = "Name tag for EC2 instance"
-  type        = string
-
-  validation {
-    condition     = length(var.name) > 0
-    error_message = "Name tag must not be empty."
-  }
-}
 
 variable "environment" {
   description = "Environment (dev, qa, prod)"
