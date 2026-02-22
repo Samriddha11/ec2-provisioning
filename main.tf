@@ -9,7 +9,6 @@ resource "aws_instance" "ec2_instance" {
   #key_name      = var.key_name
 
   tags = {
-    Name         = var.name
     environment  = lower(var.environment)
     owner        = var.owner
     cost_centre  = var.cost_centre
